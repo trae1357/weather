@@ -1,177 +1,225 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Weather Dashboard</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
+<head>
+  <title>Weather Dashboard</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="weather.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
 
-    
-    <div class="jumbotron p-3">
-        <h1 class="p-4 mb-2 bg-dark text-white">Your weather Dashboard!</h1>
-       
-      </div>
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <form class="form-inline my-1 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search for a city" aria-label="Search">
-            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-          </form>
-       
-          
-        </div>
-      </nav>
+<body>
 
 
 
+  <div class="jumbotron p-3">
+    <h1 class="p-4 mb-2 bg-dark text-white">Weather Dashboard!</h1>
 
-
-
-      
-      <div class="container.order-sm-12
-      m-12 p-10">
-    
-
-        <ul class="list-group">
-          <h1 class="list-group-item cityName">Your city</h1>
-          <li class="list-group-item temp">Temperature:</li>
-          <li class="list-group-item humid">Humidity:</li>
-          <li class="list-group-item wind">Wind Speed:</li>
-          <li class="list-group-item uvIndex">UV index:</li>
-        </ul>
-        
-  <div class="row">
-    
   </div>
-        <h1>5 day forcast</h1>
-        <div id="openweathermap-widget-1"></div>
-        <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script><script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 1,cityid: '5506956',appid: 'be1b169467169d90c80bf8e15505026c',units: 'imperial',containerid: 'openweathermap-widget-1',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
-      </div>
-    <div class="container.order-sm-1">
-        
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <form class="form-inline my-1 my-lg-0">
+      <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search for a city" aria-label="Search">
+      <button id="searchBtn" class="btn btn-outline-info my-2 my-sm-0 " type="submit">Search</button>
+    </form>
+
+
     </div>
-    <button id = "find-me">Show my location</button><br/>
-    <p id = "status"></p>
-    <a id = "map-link" target="_blank"></a>
-          
-      </div>
+  </nav>
 
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class=".container-sm p-1 m-0">
       <div class="row">
+        <div class="col Austin"><button>Austin</div></button>
   
+      </div>
+    </div>
+    <br>
+  
+    <div class=".container-sm p-1 m-0">
+      <div class="row">
+        <div class="col"><button>Chicago</div></button>
+  
+      </div>
+    </div>
+    <br>
+  
+  
+    <div class=".container-sm p-1 m-0">
+      <div class="row">
+        <div class="col"><button>New York</div></button>
+  
+      </div>
+    </div>
+    <br>
+  
+    <div class=".container-sm p-1 m-0">
+      <div class="row">
+        <div class="col"><button>Orlando</div></button>
+  
+      </div>
+    </div>
+  
+    <br>
+  
+    <div class=".container-sm p-1 m-0">
+      <div class="row">
+        <div class="col"><button>San Fransisco</div></button>
+  
+      </div>
+      <br>
+    </div>
+    <div class=".container-sm p-1 m-0">
+      <div class="row">
+        <div class="col"><button>Seattle</div></button>
+      </div>
+      <br>
+  
+    </div>
+    <div class=".container-sm p-1 m-0">
+      <div class="row">
+        <div class="col"><button>Denver</div></button>
+  
+  
+      </div>
+      <br>
+    </div>
+    <div class=".container-sm p-1 m-0">
+      <div class="row">
+        <div class="col"><button>Atlanta</div></button>
+  
+      </div>
+    </div>
+    <br>
+  
+  </div>
+  <div class="col-sm-9">
 
-        <div class="card w-25 text-info .bg-info">
+     <div class="row">
+       <div class="col-sm-12">
+
+        <div class="  p-10">
+          <ul class="list-group">
+           
+            <h1 class="list-group-item today cityName ">  </h1>
+            <li class="list-group-item temp">Temperature:</li>
+            <li class="list-group-item humid">Humidity:</li>
+            <li class="list-group-item wind">Wind Speed:</li>
+            <li class="list-group-item uvIndex">UV index:</li>
+          </ul>
+      
+      
+      
+        </div>
+       </div>
+     </div>
+     
+     <div class="row">
+       <div class="col-sm-12">
+      
+        <button id="find-me">Show my location</button><br />
+        <p id="status"></p>
+        <a id="map-link" target="_blank"></a>
+      
+        </div>
+      
+        <h1>5 day forcast</h1>
+      
+        <div class="card-deck">
+         
+
+
+
+        </div>
+       
+      </div>
+     </div>
+
+ 
+  
+  
+  
+  </div>
+
+</div>
+
+
+
+
+
+
+  <!-- <div class="row">
+        
+
+        <div class="card w-10 text-info .bg-info">
           <div class="card-body">
             <h5 class="card-title">City Name</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
             <a href="#" class="btn btn-primary">Button</a>
           </div>
         </div>
-        <div class="card w-25 text-info">
+        <div class="card w-10 text-info">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
             <a href="#" class="btn btn-primary">Button</a>
           </div>
         </div>
-        <div class="card w-25 text-info ">
+        <div class="card w-10 text-info ">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
             <a href="#" class="btn btn-primary">Button</a>
           </div>
+          <div class="card w-10 text-info .bg-info">
+            <div class="card-body">
+              <h5 class="card-title">City Name</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Button</a>
+            </div>
         </div>
       </div>
-      
-      <div class=".container-sm p-1 m-0">
-        <div class="row">
-          <div class="col Austin"><button>Austin</div></button>
-          
-        </div>
-      </div>
-      <br>
+       -->
 
-      <div class=".container-sm p-1 m-0">
-        <div class="row">
-          <div class="col"><button>Chicago</div></button>
-          
-        </div>
-      </div>
-      <br>
-      
-
-      <div class=".container-sm p-1 m-0">
-        <div class="row">
-          <div class="col"><button>New York</div></button>
-          
-        </div>
-      </div>
-        <br>
-
-        <div class=".container-sm p-1 m-0">
-        <div class="row">
-          <div class="col"><button>Orlando</div></button>
-          
-        </div>
-      </div>
-
-      <br>
-       
-      <div class=".container-sm p-1 m-0">
-        <div class="row">
-          <div class="col"><button>San Fransisco</div></button>
-          
-        </div>
-        <br>
-      </div>
-      <div class=".container-sm p-1 m-0">
-        <div class="row">
-          <div class="col"><button>Seattle</div></button>
-          </div>
-          <br>
-
-      </div>
-      <div class=".container-sm p-1 m-0">
-        <div class="row">
-          <div class="col"><button>Denver</div></button>
-          
-
-        </div>
-        <br>
-      </div>
-      <div class=".container-sm p-1 m-0">
-        <div class="row">
-          <div class="col"><button>Atlanta</div></button>
-          
-        </div>
-      </div>
-      <br>
-
-    </div>
-
-    
-      
-
-
-    
+  <!-- <h2>5 day forcast</h2>
+      <div id="openweathermap-widget-1"></div>
+      <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script><script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 1,cityid: '5506956',appid: 'be1b169467169d90c80bf8e15505026c',units: 'imperial',containerid: 'openweathermap-widget-1',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+    </div> -->
 
 
 
 
 
-      
-    <!-- Optional JavaScript -->
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-  </body>
+
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>
