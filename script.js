@@ -16,11 +16,11 @@ function displayDashboard(search) {
   $(".humid").empty()
   $(".wind").empty()
   $(".uvIndex").empty()
-  fetch("http://api.openweathermap.org/data/2.5/weather?q=" + search + "&units=imperial&appid=be1b169467169d90c80bf8e15505026c").then(function (response) {
+  fetch("https://api.openweathermap.org/data/2.5/weather?q=" + search + "&units=imperial&appid=be1b169467169d90c80bf8e15505026c").then(function (response) {
     return response.json()
   }).then(function (data) {
     console.log(data);
-    var weatherIcon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+    var weatherIcon = "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
     console.log(weatherIcon);
     // $('.cityName').append('src', weatherIcon);
 
@@ -45,7 +45,7 @@ function displayDashboard(search) {
 
 
 
-    fetch("http://api.openweathermap.org/data/2.5/uvi?lat=" + data.coord.lat + "&lon=" + data.coord.lon + "&appid=be1b169467169d90c80bf8e15505026c")
+    fetch("https://api.openweathermap.org/data/2.5/uvi?lat=" + data.coord.lat + "&lon=" + data.coord.lon + "&appid=be1b169467169d90c80bf8e15505026c")
       .then(function (response) {
         return response.json()
       }).then(function (uvIndex) {
