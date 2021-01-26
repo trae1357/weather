@@ -15,6 +15,7 @@ function displayDashboard(search) {
   $(".temp").empty()
   $(".humid").empty()
   $(".wind").empty()
+  $(".uvIndex").empty()
   fetch("http://api.openweathermap.org/data/2.5/weather?q=" + search + "&units=imperial&appid=be1b169467169d90c80bf8e15505026c").then(function (response) {
     return response.json()
   }).then(function (data) {
@@ -72,15 +73,15 @@ function displayDashboard(search) {
           var weatherImage = $("<img>").attr("src", weatherIcon)
 
           var today = "(" + moment(week.list[i].dt, "X").format("MM/DD/YYYY") + ")"
-
+          
 
          $(".card-deck").append(`
-             
+        
           <div class="card" style="width: 18rem; ">
           <img src= ${weatherIcon}>
           <div class="card-body bg-primary text-white">
             <h5 class="card-title">${today}</h5>
-            <h5 class="temp">Temperature </h5>
+            <h5 class="temp">Temperature</h5>
             <p class="humid">Humidity</p>
           </div>
         </div>
@@ -139,3 +140,4 @@ function geoFindMe() {
 
 }
 
+empty().onclick()
